@@ -1,0 +1,47 @@
+(gdb) run
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+Starting program: /home/karam/Desktop/infintylab/git/c/debug-learn/a.out 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at debug_test1.c:4
+4	{
+(gdb) n
+7			printf("enter a number:");
+(gdb) 
+8			scanf("%d",&num);
+(gdb) 
+enter a number:4
+9		}while(num<0);
+(gdb) 
+11		for(i=1 ; i <= num ; i++)
+(gdb) p fact=1
+$5 = 1
+(gdb) info locals
+num = 4
+fact = 1
+i = 0
+(gdb) n
+13			fact=fact*i;
+(gdb) 
+11		for(i=1 ; i <= num ; i++)
+(gdb) 
+13			fact=fact*i;
+(gdb) 
+11		for(i=1 ; i <= num ; i++)
+(gdb) 
+13			fact=fact*i;
+(gdb) 
+11		for(i=1 ; i <= num ; i++)
+(gdb) 
+13			fact=fact*i;
+(gdb) 
+11		for(i=1 ; i <= num ; i++)
+(gdb) 
+16		printf("%d != %d \n",num,fact);
+(gdb) 
+4 != 24 
+18	return 0 ;
+(gdb) 
+
